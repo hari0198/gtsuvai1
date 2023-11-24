@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gtsuvai/colors.dart';
 
@@ -52,6 +53,10 @@ class _mustState extends State<must> {
             ),
             itemBuilder:( BuildContext ctx, index){
               return Card(
+                elevation: 5,
+                shadowColor: gtgreen,
+                color: bgclr,
+
                 child: Column(
                   children: [
                     Stack(
@@ -118,42 +123,12 @@ class _mustState extends State<must> {
                       ],
                     ),
 
-                    Row(
-                      children: [
-                        Container(
-                          height: 50,
-                          width: 150,
-                          color: Colors.red,
-                          child: Row(
-                            children: <Widget>[
-
-                              _itemCount!=0? new  IconButton(icon: new Icon(Icons.remove,color: Colors.white,),onPressed: ()=>setState(()=>_itemCount--),):new Container(),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text('Add',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),),
-                              ),
-                              new Text(_itemCount.toString()),
-                              new IconButton(icon: new Icon(Icons.add,color: Colors.white,),onPressed: ()=>setState(()=>_itemCount++)),
-
-
-                            ],
-                          ),
-                        ),
-                      ],
-                    )
+                    Gap(5),
+                    Text("The grains of rice must not stick together but remain separate. The pieces of meat must be succulent – clear and dry – not greasy – and the meat must easily separate from the rice",style:  GoogleFonts.openSans(fontSize: 8, )),
 
 
 
 
-                    // Divider(
-                    //   thickness: 2,
-                    // ),
-                    // Row(
-                    //   children: [
-                    //     Icon(Icons.thumb_up_sharp),
-                    //     Text('   Extra 50% OFF',style:  GoogleFonts.openSans(fontSize: 15,color: Colors.grey),)
-                    //   ],
-                    // )
                   ],
                 ),
               );

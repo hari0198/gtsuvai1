@@ -99,6 +99,9 @@ class _HotelDescriptionState extends State<HotelDescription> {
                                 );
                               });
                             },
+
+
+
                             child: Icon(Icons.arrow_left,size: 40,color: Colors.white,)),
                         Positioned(
                           left: MediaQuery.of(context).size.width*.3,

@@ -14,13 +14,13 @@ class _SplashState extends State<Splash> {
   Widget build(BuildContext context) {
     return AnimatedSplashScreen(
       centered: true,
-      duration: 2000,
+      duration: 4000,
       splashIconSize: double.maxFinite,
       splash: Container(
         height:MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage("assets/img/splash1.gif"),fit: BoxFit.fill),
+          image: DecorationImage(image: AssetImage("assets/img/bf1.gif"),fit: BoxFit.fill),
         ),
       ),
       nextScreen: const page1(),

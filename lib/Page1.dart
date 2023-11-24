@@ -30,11 +30,15 @@ class _page1State extends State<page1> {
         child: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {return[
             SliverAppBar(
+               automaticallyImplyLeading: false,
+
               toolbarHeight: 135,
               centerTitle: false,
+
               title: Padding(
                 padding: const EdgeInsets.all(5.0),
                 child: Column(
+
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
